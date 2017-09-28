@@ -1,4 +1,4 @@
-module.exports = function (Kirbi) {
+module.exports = function (Doorman) {
 	return {
 		commands: [
 			'xkcd',
@@ -17,7 +17,7 @@ module.exports = function (Kirbi) {
 					try {
 						const comic = JSON.parse(body);
 						cb({ embed: {
-							color: Kirbi.Config.discord.defaultEmbedColor,
+							color: Doorman.Config.discord.defaultEmbedColor,
 							title: `XKCD ${comic.num} ${comic.title}`,
 							image: {
 								url: comic.img
